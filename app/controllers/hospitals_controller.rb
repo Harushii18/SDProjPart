@@ -14,11 +14,7 @@ class HospitalsController < ApplicationController
   	if @data.blank?
 	  	@hospitals_array=@db_data	
 	else
-		
-	  		@hospitals_array=@db_data.select{|x,y| y.match(/#{@data}/) }
-
-		
-	  		
+	  	@hospitals_array=@db_data.select{|x,y| y.match(/#{@data}/) }	
 	end
 
   	#===================================================

@@ -8,6 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+//not really necessary, since it doesnt work
+require('x-editable/dist/bootstrap3-editable/js/bootstrap-editable')
+require('x-editable/dist/bootstrap3-editable/css/bootstrap-editable')
+
 Rails.start()
 //Turbolinks.start()
 ActiveStorage.start()

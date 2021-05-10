@@ -6,11 +6,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!--INCORPORATE EDITABLE TABLES. DOESNT WORK THOUGH-->
+    <link href="bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <script src="bootstrap-editable/js/bootstrap-editable.js"></script>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!--Used shared nav bar partial-->
+    <%= render "nav_bar" %>
     <%= yield %>
+   <!--Used shared footer partial-->
+  <%= render "footer" %>
   </body>
 </html>

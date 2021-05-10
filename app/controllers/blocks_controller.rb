@@ -3,7 +3,7 @@ class BlocksController < ApplicationController
 
   	#SEARCH BAR CODE 
   	#ONLY CHANGE THIS TO DATABASE DATA IN 3D ARRAY FORMAT!!
-  	@db_data=[["1","baba","dfsdf"],["2","fds","sdfdfs"],["3","dfsfsd","dfsfad"]]
+  	@db_data=[["1","1-May-2021","1-June-2021"],["2","1-July-2021","1-August-2021"],["3","1-September-2021","1-October-2021"]]
 
 
   	#Format is [[index],[start date],[end date]]

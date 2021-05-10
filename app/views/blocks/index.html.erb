@@ -1,11 +1,8 @@
-<!--Used shared nav bar partial-->
-<%= render "nav_bar" %>
-
 <!--SEARCH BAR-->
 <div class="m-4">
  <form class="d-flex ">
-        <input class="form-control me-2" type="search" placeholder="Search" name="searchBlocks" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Search block ID" name="searchBlocks" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
  </form>
 </div>
 
@@ -25,10 +22,17 @@
   <!--loop through each item in hospital array-->
   <% @blocks_array.each_with_index do |block_element, index| %>
     <tr>
-      <th scope="row">  <%= block_element.first %> </th>
-      <td> <%= block_element.second %> </td>
-      <td> <%= block_element.last %> </td>
+      <th scope="row" class="col-3">  <%= block_element.first %> </th>
+      <td class="col-4"> <%= block_element.second %> </td>
+      <td class="col-4"> <%= block_element.last %> </td>
   
+      <!--edit and delete functionality-->
+      <td class="col-1">
+        <div id=" <%= block_element.first %> "  class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-dark">Edit</button>
+          <button type="button" class="btn btn-outline-dark">Delete</button>
+     </div>
+      </td>
     </tr>
   <% end %>
   </tbody>
