@@ -1,0 +1,37 @@
+<!--Used shared nav bar partial-->
+<%= render "nav_bar" %>
+
+<!--SEARCH BAR-->
+<div class="m-4">
+ <form class="d-flex ">
+        <input class="form-control me-2" type="search" placeholder="Search" name="searchBlocks" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+ </form>
+</div>
+
+
+<!--TABLE-->
+<div class="m-4">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Block ID</th>
+    	<th scope="col">Start_Date</th>
+    	<th scope="col">End Date</th> 
+    </tr>
+  </thead>
+
+<tbody>
+  <!--loop through each item in hospital array-->
+  <% @blocks_array.each_with_index do |block_element, index| %>
+    <tr>
+      <th scope="row">  <%= block_element.first %> </th>
+      <td> <%= block_element.second %> </td>
+      <td> <%= block_element.last %> </td>
+  
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+  
+</div>
